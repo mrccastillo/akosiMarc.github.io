@@ -32,7 +32,7 @@ nav {
     background-size: cover;
     width: 6em;
     height: 6em;
-    margin-left: 1em;
+    margin-left: 0.6em;
 }
 
 .nav-links {
@@ -182,7 +182,8 @@ nav {
         /* background-color: rgb(110, 30, 120); */
 }
 
-.proj-container {
+.proj-container,
+.test-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -201,7 +202,9 @@ nav {
 }
 
 .proj-pic-1,
-.proj-pic-2 {
+.proj-pic-2,
+.test-pic-1,
+.test-pic-2 {
     text-align: center;
     /* background-color: brown; */
     border-radius: 2em;
@@ -263,9 +266,40 @@ nav {
 
 
 .main-body-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     height: 100vh;
     width: 100%;
     /* background-color: rgb(30, 83, 120); */
+}
+
+.test-container {
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid rgba(162, 69, 255, 0.15);
+    border-right: 1px solid rgba(190, 48, 255, 0.15);
+    margin: 0 0.5em;
+    transition: transform 0.2s;
+}
+
+.test-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 10px 0px rgba(207, 75, 255, 0.474);
+}
+
+.test-pic-1,
+.test-pic-2 {
+    background-image: url('pics/person.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 1em 0.5em 1em 0;
+    transition: transform 0.2s;
+}
+
+.test-pic-1:hover,
+.test-pic-2:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px 0px rgba(207, 75, 255, 0.474);
 }
 
 .main-body-5 {
@@ -306,6 +340,7 @@ a {
     text-decoration: none;
     font-weight: 700;
     transition: all 0.3s;
+    margin-right: 5px;
 }
 
 a:hover {
@@ -372,7 +407,7 @@ a:hover {
     nav {
         display: flex;
         flex-direction: column;
-        width: 11%;
+        width: 9%;
         height: 100vh;
         position: fixed;
         backdrop-filter: blur(5px);
@@ -435,6 +470,10 @@ a:hover {
         margin-top: 3em;
     }
 
+    .marccontent p {
+        text-align: start;
+    }
+
     p {
         margin-top: 0.5em;
     }
@@ -459,7 +498,8 @@ a:hover {
         margin: 0.5em 0;
     }
 
-    .proj-container {
+    .proj-container,
+    .test-container {
         flex-direction: column;
         width: 30%;
         height: 85%;
@@ -467,15 +507,18 @@ a:hover {
         padding: 1em;
     }
 
-    .main-body-3 {
+    .main-body-3,
+    .main-body-4 {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding-left: 10em;
+        align-items: center;
     }
 
     .proj-pic-1,
-    .proj-pic-2 {
+    .proj-pic-2,
+    .test-pic-1,
+    .test-pic-2 {
         text-align: center;
         /* background-color: brown; */
         border-radius: 2em;
